@@ -13,33 +13,33 @@ namespace NavigationErik
         public MainPage()
         {
             InitializeComponent();
-          //Понедельник
+            //Понедельник
             StackLayout st = new StackLayout();
-            Button esm_btn = new Button { Text = "Понедельник" };
+            Button esm_btn = new Button { Text = "Понедельник", ImageSource = "Solntse.png", BackgroundColor = Color.LightBlue };
             st.Children.Add(esm_btn);
             esm_btn.Clicked += new EventHandler(Btns_Clicked);
             //Вторник
-            Button teis_btn = new Button { Text = "Вторник" };
+            Button teis_btn = new Button { Text = "Вторник", ImageSource = "Solntse.png", BackgroundColor = Color.LightBlue };
             st.Children.Add(teis_btn);
             teis_btn.Clicked += new EventHandler(Btns_Clicked);
             //Среда
-            Button sreda_btn = new Button { Text = "Среда" };
+            Button sreda_btn = new Button { Text = "Среда", ImageSource = "Solntse.png", BackgroundColor = Color.LightBlue };
             st.Children.Add(sreda_btn);
             sreda_btn.Clicked += new EventHandler(Btns_Clicked);
             //Четверг
-            Button tset_btn = new Button { Text = "Четверг" };
+            Button tset_btn = new Button { Text = "Четверг", ImageSource = "Solntse.png", BackgroundColor = Color.LightBlue };
             st.Children.Add(tset_btn);
             tset_btn.Clicked += new EventHandler(Btns_Clicked);
             //Пятница
-            Button pjat_btn = new Button { Text = "Пятница" };
+            Button pjat_btn = new Button { Text = "Пятница", ImageSource = "Solntse.png", BackgroundColor = Color.LightBlue };
             st.Children.Add(pjat_btn);
             pjat_btn.Clicked += new EventHandler(Btns_Clicked);
             //Суббота
-            Button syb_btn = new Button { Text = "Суббота" };
+            Button syb_btn = new Button { Text = "Суббота", ImageSource = "Solntse.png", BackgroundColor = Color.LightBlue };
             st.Children.Add(syb_btn);
             syb_btn.Clicked += new EventHandler(Btns_Clicked);
             //Воскресенье
-            Button vos_btn = new Button { Text = "Воскресенье" };
+            Button vos_btn = new Button { Text = "Воскресенье", ImageSource = "Solntse.png", BackgroundColor = Color.LightBlue };
             st.Children.Add(vos_btn);
             vos_btn.Clicked += new EventHandler(Btns_Clicked);
 

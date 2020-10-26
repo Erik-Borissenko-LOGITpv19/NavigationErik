@@ -4,7 +4,7 @@
              x:Class="NavigationErik.Pon">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Вторник"
+            <Label Text="Вторник!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>

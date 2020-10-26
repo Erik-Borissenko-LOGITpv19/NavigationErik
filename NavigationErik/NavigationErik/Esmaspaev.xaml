@@ -7,6 +7,7 @@
             <Label Text="Понедельник!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+  
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
