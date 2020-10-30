@@ -19,8 +19,24 @@ namespace NavigationErik
             ListView list = new ListView();
             list.ItemsSource = tasks;
             list.ItemSelected += List_ItemSelected1;
-            Content = new StackLayout { Children = { list } };
+            Button gg5 = new Button { Text = "Назад" };
+            gg5.Clicked += gg5_Clicked;
+            gg5.BackgroundColor = Color.LightBlue;
+            gg5.ImageSource = "leftbutton.png";
+            Button biba4 = new Button { Text = "Вперед" };
+            biba4.Clicked += Biba4_Clicked;
+            biba4.BackgroundColor = Color.LightBlue;
+            biba4.ImageSource = "vpered.png";
+            Content = new StackLayout { Children = { list, gg5, biba4 } };
             BackgroundColor = Color.LightBlue;
+        }
+        private async void gg5_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+        }
+        private async void Biba4_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Voskresenje());
         }
         string kell;
         private async void List_ItemSelected1(object sender, SelectedItemChangedEventArgs e)

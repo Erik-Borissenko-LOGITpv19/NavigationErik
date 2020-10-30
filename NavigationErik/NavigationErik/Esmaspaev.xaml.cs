@@ -12,6 +12,7 @@ namespace NavigationErik
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Esmaspaev : ContentPage
     {
+     
         public Esmaspaev()
         {
             Title = "Понедельник";
@@ -19,10 +20,28 @@ namespace NavigationErik
             ListView list = new ListView();
             list.ItemsSource = tasks;
             list.ItemSelected += List_ItemSelected1;
-            Content = new StackLayout { Children = { list } };
+            Button biba = new Button { Text = "Назад" };
+            biba.Clicked += Biba_Clicked;
+            biba.BackgroundColor = Color.LightBlue;
+            biba.ImageSource = "leftbutton.png";
             BackgroundColor = Color.LightBlue;
-
+            Button biba1 = new Button { Text = "Вперед" };
+            biba1.Clicked += Biba1_Clicked;
+            biba1.BackgroundColor = Color.LightBlue;
+            biba1.ImageSource = "vpered.png";
+            Content = new StackLayout { Children = { list, biba, biba1 } };
         }
+
+        private async void Biba1_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Pon());
+        }
+
+        private async void Biba_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+        }
+
         string kell;
         private async void List_ItemSelected1(object sender, SelectedItemChangedEventArgs e)
         {
@@ -67,6 +86,7 @@ namespace NavigationErik
                 }
 
                 await DisplayAlert(kell, text, "Да хватит уже читать... Нечего читать тут мои планы на успешную жизнь:D");
+                
             }
         }
 

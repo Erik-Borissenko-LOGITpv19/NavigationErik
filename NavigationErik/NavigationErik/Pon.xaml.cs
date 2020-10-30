@@ -12,6 +12,7 @@ namespace NavigationErik
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Pon : ContentPage
     {
+
         public Pon()
         {
             Title = "Вторник";
@@ -19,11 +20,26 @@ namespace NavigationErik
             ListView list = new ListView();
             list.ItemsSource = tasks;
             list.ItemSelected += List_ItemSelected1;
-            Content = new StackLayout { Children = { list } };
+            Button gg = new Button { Text = "Назад" };
+            gg.Clicked += gg_Clicked;
+            gg.BackgroundColor = Color.LightBlue;
+            gg.ImageSource = "leftbutton.png";
+            Button biba3 = new Button { Text = "Вперед" };
+            biba3.Clicked += Biba3_Clicked;
+            biba3.BackgroundColor = Color.LightBlue;
+            biba3.ImageSource = "vpered.png";
+            Content = new StackLayout { Children = { list, gg, biba3 } };
             BackgroundColor = Color.LightBlue;
-
         }
-        string kell, Zag;
+        private async void gg_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+        }
+        private async void Biba3_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Vt());
+        }
+        string kell;
         private async void List_ItemSelected1(object sender, SelectedItemChangedEventArgs e)
         {
             if (e.SelectedItem != null)
